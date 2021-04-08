@@ -24,6 +24,16 @@ public class SignInActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
+        binding.btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignInActivity.this, SignUpActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fragment_slide_left_enter, R.anim.fragment_slide_left_exit);
+            }
+        });
         
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,5 +64,10 @@ public class SignInActivity extends AppCompatActivity {
                 fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

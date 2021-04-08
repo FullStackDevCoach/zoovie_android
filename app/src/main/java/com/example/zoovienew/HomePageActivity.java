@@ -75,6 +75,11 @@ public class HomePageActivity extends AppCompatActivity {
 
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }
         /*pager = findViewById(R.id.view_pager_home);
 

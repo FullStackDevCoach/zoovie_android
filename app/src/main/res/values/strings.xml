@@ -26,4 +26,6 @@
     <string name="zoovie">ZOOVIE</string>
     <string name="connect">Connect</string>
     <string name="username">Username</string>
+    <string name="my_profile">My Profile</string>
+    <string name="hostS_timeline">HOSTS TIMELINE</string>
 </resources>
