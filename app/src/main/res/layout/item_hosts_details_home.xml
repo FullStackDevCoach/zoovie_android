@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_280sdp"
+    android:layout_height="@dimen/_300sdp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginTop="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_280sdp"
+        app:cardCornerRadius="10dp"
+        android:visibility="visible"
+        android:elevation="15dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/demo_image">
+
+            <LinearLayout
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:layout_alignParentBottom="true">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@string/username"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="OPIUM, GOLDROOM, ATLANTA"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_connect"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/rectangular_10_solid"
+                android:text="@string/connect"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:layout_margin="@dimen/_16sdp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="46k Views"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/dark_grey"/>
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity"
+    android:background="@drawable/background_register">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       android:layout_alignParentBottom="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/logoImage"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_250sdp"
+            android:src="@drawable/zoovie_splash_logo"
+            android:padding="@dimen/_16sdp"
+            android:layout_gravity="center_horizontal" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/email_login"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_32sdp"
+            android:src="@drawable/email_btn"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/facebook_login"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_32sdp"
+            android:src="@drawable/facebook_btn"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/are_you_new_host"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/poppins"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_40sdp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

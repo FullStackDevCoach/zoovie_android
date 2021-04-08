@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Zoovie New</string>
+    <string name="are_you_new_host">Are you new Host ?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_your_details_to_continue">Enter your details to continue</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="user_name">User Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="phone">Phone</string>
+    <string name="term_and_condition">By clicking Sign Up above, you are agreeing to our Terms and conditions.</string>
+    <string name="already_a_member">Already a Member ? </string>
+    <string name="login_here">LOGIN HERE</string>
+    <string name="login">Login</string>
+    <string name="email_or_username">Email / Username</string>
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="new_user">New User ? </string>
+    <string name="sign_up_here">SIGN UP HERE</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="please_enter_the_otp_send_to">Please enter the OTP send to </string>
+    <string name="next">next</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="zoovie">ZOOVIE</string>
+    <string name="connect">Connect</string>
+    <string name="username">Username</string>
+</resources>

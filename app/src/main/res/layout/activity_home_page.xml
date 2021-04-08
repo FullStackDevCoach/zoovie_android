@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePageActivity"
+    android:background="@color/white">
+
+<!--    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zoovie"
+        android:textSize="@dimen/_25ssp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textColor="@color/black"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_chat"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_chat"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_12sdp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_5sdp"
+        android:background="@drawable/color_home_gradient"
+        android:layout_below="@id/header_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_title">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            app:tabTextAppearance="@style/MineCustomTabText"
+            app:tabIndicatorColor="@color/btn_color_red"
+            app:tabSelectedTextColor="@color/bn_color_red"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_hosts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOSTS" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_venues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VENUES" />
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager_home"
+            android:layout_below="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>-->
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:padding="-2dp"
+        android:background="@drawable/rounded_rectangular_white"
+        android:elevation="8dp"
+        app:labelVisibilityMode="unlabeled"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu" />
+
+<!--    app:itemIconTint="@drawable/bottom_navigation_color_selector"-->
+
+</RelativeLayout>
