@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_75sdp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_6sdp"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_profile_image"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_margin="@dimen/_3sdp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/person_image"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_profile_name_connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:text="Rufaro"
+        android:textColor="@color/et_text_hint_color"
+        android:textSize="@dimen/_14ssp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_profile_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_21sdp"
+        android:text="@string/connect"
+        android:textSize="@dimen/_10ssp"
+        android:gravity="center"
+        android:textColor="@color/light_grey"
+        android:background="@drawable/rectangular_border_10_btn"
+        android:layout_gravity="center_horizontal"
+        />
+
+</LinearLayout>

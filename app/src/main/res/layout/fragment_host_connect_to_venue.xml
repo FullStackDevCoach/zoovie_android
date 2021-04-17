@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_light_blue"
+    tools:context=".Hosts.Fragment.HostConnectToVenueFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/connect_to_venue_caps"
+        android:textSize="@dimen/_20ssp"
+        android:layout_toEndOf="@+id/btn_back"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:textColor="@color/black"/>
+
+    !--    back arrow imageview-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:tint="@color/black"
+        android:paddingTop="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_2sdp"/>
+
+    <RelativeLayout
+        android:id="@+id/spacer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_5sdp"
+        android:background="@drawable/color_home_gradient"
+        android:layout_below="@id/header_title"/>
+
+    <!--    tab view layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@+id/spacer">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout_connect_to_venues"
+            android:layout_width="match_parent"
+            app:tabTextAppearance="@style/MineCustomTabText"
+            app:tabIndicatorColor="@color/btn_color_red"
+            app:tabSelectedTextColor="@color/bn_color_red"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_venues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VENUES" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_send_request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SEND REQUEST" />
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager_host_connect_to_venue"
+            android:layout_below="@+id/tabLayout_connect_to_venues"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

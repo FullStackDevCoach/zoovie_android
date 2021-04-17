@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Zoovie New</string>
+    <string name="app_name">Zoovie Clubs</string>
     <string name="are_you_new_host">Are you new Host ?</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -27,5 +27,68 @@
     <string name="connect">Connect</string>
     <string name="username">Username</string>
     <string name="my_profile">My Profile</string>
+    <string name="other_profile">Other Profile</string>
     <string name="hostS_timeline">HOSTS TIMELINE</string>
+    <string name="exclusive_events">EXCLUSIVE EVENTS</string>
+    <string name="exclusive_event_caps">EXCLUSIVE EVENT</string>
+    <string name="limited_slots">Limited Slots</string>
+    <string name="about">About</string>
+    <string name="dummy_text">Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled. </string>
+    <string name="tickets">Tickets</string>
+    <string name="ticket_caps">TICKETS</string>
+    <string name="messages_caps">MESSAGES</string>
+    <string name="notification_caps">NOTIFICATIONS</string>
+    <string name="profile_name">Charlotte Bass</string>
+    <string name="like">43 likes</string>
+    <string name="comments">4 Comments</string>
+    <string name="tab_to_allow_notifications">Tab to allow Notification</string>
+    <string name="highlights">Highlights</string>
+    <string name="connections">Connections</string>
+    <string name="see_all">See all</string>
+    <string name="check_availability">CHECK AVAILABILITY</string>
+    <string name="availability_caps">AVAILABILITY</string>
+    <string name="events_caps">EVENTS</string>
+    <string name="view_all">View All</string>
+    <string name="visited_places">VISITED PLACES</string>
+    <string name="comment">COMMENTS</string>
+    <string name="select_type">Select Type</string>
+    <string name="order_now">Order Now</string>
+    <string name="table_service">Table Service</string>
+    <string name="vip_tickets">VIP Tickets</string>
+    <string name="general_tickets">General Tickets</string>
+    <string name="total">Total</string>
+    <string name="thank_you">Thank You</string>
+    <string name="your_order_is_successfully_done">Your order is successfully done</string>
+    <string name="your_qr_code">Your QR Code</string>
+    <string name="go_to_home_page">Go to Home Page</string>
+    <string name="cancel_caps">CANCEL</string>
+    <string name="settings_caps">SETTINGS</string>
+    <string name="edit_profile_caps">UPDATE PROFILE</string>
+    <string name="message_caps">MESSAGES</string>
+    <string name="no_of_bottles">Number of bottle</string>
+    <string name="no_of_table">Number of table</string>
+    <string name="view_profile">View Profile</string>
+    <string name="connect_to_venue_caps">CONNECT TO VENUES</string>
+    <string name="no_connect_yet">No connect yet</string>
+    <string name="my_availability_caps">MY AVAILABILITY</string>
+    <string name="progress_caps">PROGRESS</string>
+    <string name="connections_caps">CONNECTIONS</string>
+    <string name="continue_caps">CONTINUE</string>
+    <string name="view_transaction_history"><u>view transaction history</u></string>
+    <string name="earnings">Earnings</string>
+    <string name="payout">Pay out</string>
+    <string name="payout_caps">PAYOUT</string>
+    <string name="transaction_history_caps">TRANSACTION HISTORY</string>
+    <string name="earned">Earned</string>
+    <string name="card_number">Card Number</string>
+    <string name="cvv">CVV</string>
+    <string name="month_year">MM/YYYY</string>
+    <string name="remove">Remove</string>
+    <string name="schedule_manage_caps">SCHEDULE MANAGE</string>
+
+
+    <string name="what_zoovie">What the Zoovie is ?</string>
+    <string name="where_zoovie">Where the zoovie ?</string>
+    <string name="when_zoovie">When the zoovie ?</string>
+    <string name="who_zoovie">Who the zoovie ?</string>
 </resources>

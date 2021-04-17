@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Customer.Fragment.ThankYouFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_110sdp"
+                android:src="@drawable/ic_tick"
+                android:layout_marginTop="@dimen/_70sdp"
+                android:layout_marginBottom="@dimen/_5sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thank_you"
+                android:layout_margin="@dimen/_5sdp"
+                android:textSize="@dimen/_22sdp"
+                android:fontFamily="@font/poppins_semibold"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="@dimen/_220sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/your_order_is_successfully_done"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/_20ssp"
+                android:textColor="@color/black"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:src="@drawable/ic_qr_code"
+                android:layout_marginTop="@dimen/_12sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="@dimen/_220sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/your_qr_code"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--            signup button-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_go_to_home_page"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_above="@+id/tv_cancel"
+        android:layout_gravity="center"
+        android:background="@drawable/rectangular_10_solid"
+        android:text="@string/go_to_home_page"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_margin="@dimen/_16sdp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel_caps"
+        android:textSize="@dimen/_18ssp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/et_text_hint_color"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

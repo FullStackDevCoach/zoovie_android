@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePageActivity"
+    tools:context=".Customer.Activity.HomePageActivity"
     android:background="@color/white">
 
 <!--    <androidx.appcompat.widget.AppCompatTextView
@@ -78,13 +78,14 @@
         android:id="@+id/bottom_navigation"
         android:layout_width="@dimen/_220sdp"
         android:layout_centerHorizontal="true"
-        android:layout_height="@dimen/_28sdp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:padding="-2dp"
         android:background="@drawable/rounded_rectangular_white"
         android:elevation="8dp"
+        app:itemIconSize="@dimen/_30sdp"
         app:labelVisibilityMode="unlabeled"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_navigation_menu" />

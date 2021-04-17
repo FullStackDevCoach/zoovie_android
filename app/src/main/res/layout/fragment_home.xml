@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragment.HomeFragment"
+    tools:context=".Customer.Fragment.HomeFragment"
     android:background="@color/white">
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -33,6 +33,7 @@
         android:background="@drawable/color_home_gradient"
         android:layout_below="@id/header_title"/>
 
+<!--    tab view layout-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

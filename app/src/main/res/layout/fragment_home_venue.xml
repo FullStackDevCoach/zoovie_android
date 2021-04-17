@@ -3,17 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.HomeVenueFragment">
+    tools:context=".Customer.Fragment.HomeVenueFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_venues"
-        android:layout_below="@+id/tv_host_timeline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_centerHorizontal="true"
-        android:nestedScrollingEnabled="false"
-        tools:listitem="@layout/item_venue_detail_home" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_venues"
+                android:layout_below="@+id/tv_host_timeline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_centerHorizontal="true"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_venue_detail_home" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
 
 </RelativeLayout>

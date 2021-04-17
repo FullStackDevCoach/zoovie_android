@@ -9,11 +9,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ZoovieNew">
-        <activity android:name=".OTPActivity"></activity>
-        <activity android:name=".HomePageActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".SignInActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".VideoViewActivity"></activity>
+        <activity
+            android:name=".Hosts.Activity.HostFragViewerActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Hosts.Activity.PayoutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Hosts.Activity.HostOTPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Hosts.Activity.HostHomePageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Hosts.Activity.HostSignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Hosts.Activity.HostSignInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Customer.Activity.FragViewerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Customer.Activity.OTPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Customer.Activity.HomePageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Customer.Activity.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Customer.Activity.SignInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Hosts.Activity.PayoutActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/payout_caps"
+        android:textSize="@dimen/_20ssp"
+        android:layout_toEndOf="@+id/btn_back"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:textColor="@color/black"/>
+
+    !--    back arrow imageview-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:tint="@color/black"
+        android:layout_marginTop="@dimen/_16sdp"/>
+
+    <RelativeLayout
+        android:id="@+id/spacer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_5sdp"
+        android:background="@drawable/color_home_gradient"
+        android:layout_below="@id/header_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spacer"
+        android:layout_margin="@dimen/_16sdp"
+        android:orientation="vertical">
+
+        <!--            username layout-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            app:boxBackgroundMode="none"
+            app:hintAnimationEnabled="false"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/edit_text_border_background"
+            app:hintEnabled="false"
+            app:boxBackgroundColor="@color/white"
+            tools:ignore="RtlSymmetry">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_card_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="@font/poppins"
+                android:hint="@string/card_number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/et_text_hint_color"
+                android:textSize="@dimen/_12ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!--            first name layout-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_height="@dimen/_38sdp"
+                app:boxBackgroundMode="none"
+                app:hintAnimationEnabled="false"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/edit_text_border_background"
+                app:hintEnabled="false"
+                app:boxBackgroundColor="@color/white"
+                tools:ignore="RtlSymmetry">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_expiry_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/month_year"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/et_text_hint_color"
+                    android:textSize="@dimen/_12ssp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--                last name layout-->
+            <!--            first name layout-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_height="@dimen/_38sdp"
+                app:boxBackgroundMode="none"
+                app:hintAnimationEnabled="false"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/edit_text_border_background"
+                app:hintEnabled="false"
+                app:boxBackgroundColor="@color/white"
+                tools:ignore="RtlSymmetry">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_cvv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/cvv"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/et_text_hint_color"
+                    android:textSize="@dimen/_12ssp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--          continue button-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rectangular_10_solid"
+        android:text="@string/continue_caps"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_margin="@dimen/_20sdp" />
+
+</RelativeLayout>

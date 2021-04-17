@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_light_blue"
+    tools:context=".Customer.Fragment.HostItemDetailsFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <!--    back arrow imageview-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:tint="@color/black"
+            android:paddingTop="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_10sdp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MONICA SMITH"
+            android:textSize="@dimen/_18ssp"
+            android:layout_toEndOf="@id/btn_back"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_header">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/slider"
+                android:layout_below="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_weight="5"
+                android:layout_height="@dimen/_280sdp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="3dp" />
+
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/_10sdp"
+                    app:centered="true"
+                    app:fillColor="@color/white"
+                    app:pageColor="#000C0C0C"
+                    app:snap="false"
+                    tools:ignore="MissingClass" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/_12sdp"
+                    app:cardCornerRadius="@dimen/_530sdp">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_share"
+                        android:layout_width="@dimen/_33sdp"
+                        android:layout_height="@dimen/_33sdp"
+                        android:padding="@dimen/_6sdp"
+                        android:tint="@color/white"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:src="@drawable/ic_share_blank"
+                        android:background="@color/btn_color_red"/>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+<!--            DIRECTMESSAGE LAYOUT-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_12sdp"
+                android:background="@color/white">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_direct_message"
+                    android:layout_width="@dimen/_220sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Direct message bubble"
+                    android:textSize="@dimen/_15ssp"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/black"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/_220sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_direct_message"
+                    android:text="(Ask Monica...)"
+                    android:textSize="@dimen/_15ssp"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/black"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    app:cardCornerRadius="@dimen/_5sdp">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_message"
+                        android:layout_width="@dimen/_33sdp"
+                        android:layout_height="@dimen/_33sdp"
+                        android:padding="@dimen/_8sdp"
+                        android:tint="@color/white"
+                        android:src="@drawable/ic_msg"
+                        android:background="@color/btn_color_red"/>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+<!--            check availability layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_12sdp"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/_220sdp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_availability"
+                    android:textSize="@dimen/_14ssp"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/black"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="@dimen/_220sdp"
+                        android:layout_height="wrap_content"
+                        android:text="26-July-2020"
+                        android:textSize="@dimen/_14ssp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/dark_grey"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        app:cardCornerRadius="@dimen/_5sdp">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_calender"
+                            android:layout_width="@dimen/_33sdp"
+                            android:layout_height="@dimen/_33sdp"
+                            android:padding="@dimen/_8sdp"
+                            android:tint="@color/white"
+                            android:src="@drawable/ic_calender"
+                            android:background="@color/btn_color_red"/>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <!--    tab view layout-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="@dimen/_20sdp">
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout_host_item"
+                    android:layout_width="match_parent"
+                    app:tabTextAppearance="@style/MineCustomTabText"
+                    app:tabIndicatorColor="@color/btn_color_red"
+                    app:tabSelectedTextColor="@color/bn_color_red"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_availability"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/availability_caps" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_events"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/events_caps" />
+
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/view_pager_host_item"
+                    android:layout_below="@+id/tab_layout_host_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_270sdp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        android:src="@drawable/demo_image"
+        android:scaleType="fitXY"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_host_detail_event_lounge_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ALIBI LOUNGE"
+        android:textSize="@dimen/_16ssp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/dark_grey"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_host_detail_event_lounge_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 2-4 PM"
+        android:drawableStart="@drawable/ic_clock"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/dark_grey"
+        android:drawableTint="@color/dark_grey"/>
+
+
+
+</LinearLayout>

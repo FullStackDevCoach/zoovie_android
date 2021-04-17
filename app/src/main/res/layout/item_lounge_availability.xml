@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_100sdp"
+    android:layout_margin="@dimen/_3sdp"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/demo_image"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_lounge_availability_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ALIBI ATLANTA"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/dark_grey"
+        android:maxLines="1"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginTop="@dimen/_8sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_lounge_availability_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2-4 pm"
+        android:maxLines="1"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/_13ssp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_8sdp"/>
+</LinearLayout>

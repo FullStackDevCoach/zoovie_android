@@ -3,8 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.PlayFragment"
-    android:background="@color/white">
+    tools:context=".Customer.Fragment.PlayFragment"
+    android:background="@color/background_light_blue">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/header_title"
@@ -26,12 +33,47 @@
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_12sdp"/>
 
+    </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/spacer"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_5sdp"
         android:background="@drawable/color_home_gradient"
-        android:layout_below="@id/header_title"/>
+        android:layout_below="@id/rl_header"/>
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spacer">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_exclusive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exclusive_events"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="@dimen/_17ssp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_12sdp"/>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_play"
+                android:layout_below="@+id/tv_exclusive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_book_ticket_details" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </RelativeLayout>

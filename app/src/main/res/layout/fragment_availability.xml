@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Customer.Fragment.AvailabilityFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_view_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_all"
+        android:textColor="@color/et_text_hint_color"
+        android:fontFamily="@font/poppins"
+        android:textSize="@dimen/_12ssp"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/_12sdp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_lounge_time"
+        android:layout_below="@+id/tv_view_all"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:nestedScrollingEnabled="false"
+        tools:listitem="@layout/item_lounge_availability" />
+
+
+</RelativeLayout>

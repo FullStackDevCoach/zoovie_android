@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_light_blue"
+    tools:context=".Customer.Fragment.ProfileDetailsFragment">
+
+    <RelativeLayout
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <!--    back arrow imageview-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:tint="@color/black"
+            android:paddingTop="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_2sdp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/other_profile"
+            android:textSize="@dimen/_22ssp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/spacer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:background="@drawable/color_home_gradient"
+        android:layout_below="@id/header_title"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spacer">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:src="@drawable/person_image"
+                android:layout_margin="@dimen/_16sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_other_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Etta McCormick"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/dark_grey"
+                android:fontFamily="@font/poppins_semibold"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="@dimen/_230sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_text"
+                android:gravity="center_horizontal"
+                android:maxLines="2"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_other_profile_connect"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_28sdp"
+                android:text="@string/connect"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/light_grey"
+                android:background="@drawable/rectangular_border_10_btn"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_other_profile_message"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_28sdp"
+                android:text="@string/messages_caps"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/light_grey"
+                android:background="@drawable/rectangular_border_10_btn"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:layout_gravity="center_horizontal"
+               android:layout_marginBottom="@dimen/_10sdp"/>
+
+            <!--    tab view layout-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="@dimen/_20sdp">
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout_other_profile"
+                    android:layout_width="match_parent"
+                    app:tabTextAppearance="@style/MineCustomTabText"
+                    app:tabIndicatorColor="@color/btn_color_red"
+                    app:tabSelectedTextColor="@color/bn_color_red"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_visited_places"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/visited_places" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_comments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/comment" />
+
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/view_pager_other_profile"
+                    android:layout_below="@+id/tab_layout_other_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_270sdp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_110sdp"
+    android:layout_height="@dimen/_160sdp"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:layout_marginTop="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        android:visibility="visible"
+        android:elevation="15dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/demo_image">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_notification_venue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALIBI ATLANTA"
+                android:textSize="@dimen/_18ssp"
+                android:fontFamily="@font/source_sans_pro_black"
+                android:textColor="@color/white"
+                android:maxLines="2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:gravity="center_horizontal"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_scan"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_25sdp"/>
+
+        </RelativeLayout>
+            
+        
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

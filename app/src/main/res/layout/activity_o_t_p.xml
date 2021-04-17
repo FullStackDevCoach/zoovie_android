@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OTPActivity"
+    tools:context=".Customer.Activity.OTPActivity"
     android:background="@drawable/background_register">
 
     <ScrollView

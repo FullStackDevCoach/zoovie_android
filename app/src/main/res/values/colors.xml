@@ -12,7 +12,11 @@
     <color name="inactive">#C1C1C1</color>
     <color name="et_white">#B2FFFFFF</color>
     <color name="et_text_hint_color">#5A5959</color>
+    <color name="light_grey">#CFCECE</color>
     <color name="dark_grey">#424141</color>
+    <color name="background_light_blue">#F5F9FC</color>
+    <color name="spacer_color">#FAF1F1</color>
+    <color name="green">#49931B</color>
 
     //button colors
     <color name="btn_color_red">#D92D33</color>

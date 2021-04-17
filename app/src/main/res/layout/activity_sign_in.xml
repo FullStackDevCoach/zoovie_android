@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignInActivity"
+    tools:context=".Customer.Activity.SignInActivity"
     android:background="@drawable/background_register">
 
     <ScrollView
@@ -166,6 +166,11 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_back"
         android:tint="@color/black"
-        android:layout_margin="@dimen/_16sdp"/>
+        android:padding="@dimen/_16sdp"/>
+
+    <FrameLayout
+        android:id="@+id/sign_in_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </RelativeLayout>

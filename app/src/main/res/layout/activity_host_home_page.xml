@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light_blue"
+    tools:context=".Hosts.Activity.HostHomePageActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_240sdp">
+
+                <RelativeLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginBottom="5dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"/>
+
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|start"
+                    android:layout_alignParentBottom="true"
+                    android:padding="@dimen/_10sdp"
+                    app:centered="true"
+                    app:fillColor="@color/white"
+                    app:pageColor="#000C0C0C"
+                    app:snap="false"
+                    tools:ignore="MissingClass" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/_12sdp"
+                    app:cardCornerRadius="@dimen/_30sdp">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:scaleX="1.2"
+                        android:scaleY="1.2"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/ic_add"
+                        android:background="@color/white"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    app:cardCornerRadius="@dimen/_30sdp">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:scaleX="1.2"
+                        android:scaleY="1.2"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/ic_notification"
+                        android:tint="@color/btn_color_red"
+                        android:background="@color/white"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    app:cardCornerRadius="@dimen/_30sdp">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/ic_drawer"
+                        android:background="@color/white"/>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:src="@drawable/person_image"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    app:civ_border_color="@color/btn_color_red"
+                    app:civ_border_width="@dimen/_2sdp"/>
+            </RelativeLayout>
+
+<!--            profiler name-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MONICA SMITH"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_semibold"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_view_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_profile"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/bn_color_red"/>
+
+<!--            connect to vanues layout-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_connect_to_venue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/connect_to_venue_caps"
+                    android:layout_margin="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_alignParentStart="true"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_view_all_connect_to_venues"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/view_all"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_margin="@dimen/_12sdp"
+                    android:textColor="@color/et_text_hint_color"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:text="@string/no_connect_yet"
+                    android:layout_below="@+id/tv_connect_to_venue"
+                    android:textSize="@dimen/_14ssp"
+                    android:textColor="@color/dark_grey"
+                    android:layout_marginBottom="@dimen/_12sdp"/>
+
+            </RelativeLayout>
+
+            <!--Availablity layout-->
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_my_availability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_availability_caps"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_alignParentStart="true"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+<!--                month and year layout-->
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_centerVertical="true"
+                   android:layout_marginStart="@dimen/_12sdp">
+
+                   <androidx.appcompat.widget.AppCompatTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="July"
+                       android:drawableEnd="@drawable/ic_drop_down_20"
+                       android:textColor="@color/et_text_hint_color"
+                       android:textSize="@dimen/_14ssp"
+                       android:fontFamily="@font/poppins"
+                       android:layout_marginEnd="@dimen/_12sdp"/>
+
+                   <androidx.appcompat.widget.AppCompatTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="2020"
+                       android:drawableEnd="@drawable/ic_drop_down_20"
+                       android:textColor="@color/et_text_hint_color"
+                       android:textSize="@dimen/_14ssp"
+                       android:fontFamily="@font/poppins"
+                       android:layout_marginEnd="@dimen/_12sdp"/>
+               </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    app:cardCornerRadius="@dimen/_5sdp">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_host_home_page_calender"
+                        android:layout_width="@dimen/_33sdp"
+                        android:layout_height="@dimen/_33sdp"
+                        android:padding="@dimen/_8sdp"
+                        android:tint="@color/white"
+                        android:src="@drawable/ic_calender"
+                        android:background="@color/btn_color_red"/>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+
+            <!--    tab view layout-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="@dimen/_20sdp">
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout_host_item"
+                    android:layout_width="match_parent"
+                    app:tabTextAppearance="@style/MineCustomTabText"
+                    app:tabIndicatorColor="@color/btn_color_red"
+                    app:tabSelectedTextColor="@color/bn_color_red"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_connections"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/connections_caps" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/progress_caps" />
+
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/view_pager_host_item"
+                    android:layout_below="@+id/tab_layout_host_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+<!--                table layout-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp">
+                    <LinearLayout
+                        android:id="@+id/rl_table_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:src="@drawable/ic_table"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7 Tables"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:textSize="@dimen/_15ssp"
+                            android:textColor="@color/black"/>
+
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+<!--                bottle layout-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp">
+                    <LinearLayout
+                        android:id="@+id/rl_bottle_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:src="@drawable/ic_bottle"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12 Bottles"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:textSize="@dimen/_15ssp"
+                            android:textColor="@color/black"/>
+
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

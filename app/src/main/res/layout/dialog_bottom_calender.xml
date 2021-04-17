@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_12sdp"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/schedule_manage_caps"
+        android:textSize="@dimen/_16ssp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/btn_color_red"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/cancel"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/ic_cancel"
+        android:layout_alignParentEnd="true"
+        android:tint="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cancel"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/light_grey"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:weightSum="2">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="July"
+                android:layout_alignParentStart="true"
+                android:drawableEnd="@drawable/ic_drop_down_20"
+                android:textColor="@color/et_text_hint_color"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginEnd="@dimen/_12sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2020"
+                android:layout_alignParentEnd="true"
+                android:drawableEnd="@drawable/ic_drop_down_20"
+                android:textColor="@color/et_text_hint_color"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginEnd="@dimen/_12sdp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@color/light_grey">
+
+        </RelativeLayout>
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_calender_apply"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/rectangular_10_solid"
+            android:text="APPLY"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginBottom="@dimen/_12sdp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"/>
+    </LinearLayout>
+</RelativeLayout>

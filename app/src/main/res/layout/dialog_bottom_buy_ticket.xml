@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_12sdp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<!--        select type text view-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_dialog_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_type"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/dark_grey"
+            android:fontFamily="@font/poppins_medium"/>
+
+<!--        spacer layout-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/light_grey"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_dialog_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tickets"
+                android:textSize="@dimen/_14ssp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/dark_grey"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 50"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="@dimen/_14ssp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/btn_icon_background_red"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:text="-"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/black"
+                    android:background="@drawable/rectangular_border_1"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/black"
+                    android:background="@drawable/rectangular_border_1"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:text="+"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14ssp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/black"
+                    android:background="@drawable/rectangular_border_1"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--            order now button-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_dialog_bottom_order_now"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/rectangular_10_solid"
+            android:text="@string/order_now"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginBottom="@dimen/_12sdp" />
+    </LinearLayout>
+</RelativeLayout>

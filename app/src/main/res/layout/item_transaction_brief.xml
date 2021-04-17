@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_4sdp"
+    android:background="@color/white"
+    android:padding="@dimen/_16sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_transaction_name"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="wrap_content"
+            android:text="Alibi Atlanta"
+            android:textSize="@dimen/_16ssp"
+            android:layout_gravity="start"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/et_text_hint_color"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_transaction_amount"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="wrap_content"
+            android:text="$ 1000.50"
+            android:textSize="@dimen/_16ssp"
+            android:gravity="end"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_transaction_date"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="wrap_content"
+            android:text="12 June 2020"
+            android:textSize="@dimen/_12ssp"
+            android:layout_gravity="start"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/et_text_hint_color"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_transaction_earned_deducted"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="wrap_content"
+            android:text="@string/earned"
+            android:textSize="@dimen/_12ssp"
+            android:gravity="end"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/green"/>
+    </LinearLayout>
+
+</LinearLayout>
