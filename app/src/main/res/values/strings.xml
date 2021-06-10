@@ -85,6 +85,8 @@
     <string name="month_year">MM/YYYY</string>
     <string name="remove">Remove</string>
     <string name="schedule_manage_caps">SCHEDULE MANAGE</string>
+    <string name="open">Open</string>
+    <string name="closed">Closed</string>
 
 
     <string name="what_zoovie">What the Zoovie is ?</string>

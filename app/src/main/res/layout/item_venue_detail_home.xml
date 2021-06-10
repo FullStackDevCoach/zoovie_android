@@ -2,39 +2,60 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_85sdp"
-    android:layout_margin="@dimen/_2sdp">
+    android:layout_height="@dimen/_150sdp"
+    android:layout_margin="@dimen/_2sdp"
+    android:background="@drawable/demo_image"
+    android:scaleType="fitXY">
 
-    <androidx.appcompat.widget.AppCompatImageView
+   <!-- <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_venue_image"
         android:layout_width="@dimen/_85sdp"
         android:layout_height="@dimen/_85sdp"
         android:src="@drawable/demo_image"
-        android:scaleType="fitXY"/>
+        android:scaleType="fitXY"/>-->
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_venue_name"
-        android:layout_width="@dimen/_130sdp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="@dimen/_8sdp"
-        android:layout_toEndOf="@+id/iv_venue_image"
-        android:fontFamily="@font/source_sans_pro_black"
-        android:text="ALIBAI ATLANTA"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_20ssp"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_venue_location"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_venue_name"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/source_sans_pro_black"
+            android:text="ALIBAI ATLANTA"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_venue_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Atlanta"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/open"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:text="Atlanta"
-        android:textSize="@dimen/_14ssp"
-        android:fontFamily="@font/poppins"
-        android:textColor="@color/dark_grey"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="@dimen/_11sdp"/>
+        android:layout_margin="@dimen/_8sdp"
+        android:paddingStart="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_6sdp"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:background="@drawable/rounded_rectangular_white"
+        android:backgroundTint="@color/green"
+        android:textSize="@dimen/_10ssp"/>
+
 
 
 

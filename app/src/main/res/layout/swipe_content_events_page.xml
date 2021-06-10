@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -14,28 +15,22 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/tab_events"
+            android:id="@+id/tab_now"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="EVENTS" />
+            android:text="NOW" />
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/tab_hosts"
+            android:id="@+id/tab_later"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HOSTS" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tab_venues"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="VENUES" />
+            android:text="LATER" />
 
 
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/view_pager_home"
+        android:id="@+id/view_pager_home_events"
         android:layout_below="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

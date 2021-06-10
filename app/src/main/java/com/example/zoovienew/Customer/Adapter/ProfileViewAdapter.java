@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class ProfileViewAdapter extends RecyclerView.Adapter<ProfileViewAdapter.MyViewHolder>{
         ArrayList<ProfileModel> dataHolder;
-private Context mContext ;
+        private Context mContext ;
 
     public ProfileViewAdapter(ArrayList<ProfileModel> dataHolder, Context context) {
         this.dataHolder = dataHolder;
