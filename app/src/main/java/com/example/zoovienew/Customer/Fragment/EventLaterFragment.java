@@ -39,7 +39,7 @@ public class EventLaterFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentEventLaterBinding.inflate(getLayoutInflater());
-
+        dayofweeklist.clear();
         dayofweekAdapter = new DayOfWeekAdapter(getActivity(), dayofweeklist);
         binding.spinnerDayofweek.setAdapter(dayofweekAdapter);
 
