@@ -93,4 +93,6 @@
     <string name="where_zoovie">Where the zoovie ?</string>
     <string name="when_zoovie">When the zoovie ?</string>
     <string name="who_zoovie">Who the zoovie ?</string>
+
+    <string name="average_answer">Average answer.</string>
 </resources>

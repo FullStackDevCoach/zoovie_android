@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="four_dp">4dp</dimen>
+
+    <dimen name="slider_handle_ring_thickness">2dp</dimen>
+    <dimen name="slider_particle_system_anchor_offset">30dp</dimen>
+    <dimen name="slider_particle_system_particle_max_size">72dp</dimen>
+    <dimen name="slider_particle_system_particle_min_size">30dp</dimen>
+    <dimen name="slider_sticker_corner_radius">10dp</dimen>
+    <dimen name="slider_sticker_padding_bottom_with_question">26dp</dimen>
+    <dimen name="slider_sticker_padding_horizontal">30dp</dimen>
+    <dimen name="slider_sticker_question_margin">12dp</dimen>
+    <dimen name="slider_sticker_question_text_size">20sp</dimen>
+    <dimen name="slider_sticker_slider_handle_size">20dp</dimen>
+    <dimen name="slider_sticker_slider_height">30dp</dimen>
+    <dimen name="slider_sticker_slider_track_corner_radius">4.5dp</dimen>
+    <dimen name="slider_sticker_slider_track_height">6dp</dimen>
+    <dimen name="slider_sticker_slider_vote_average_handle_size">20dp</dimen>
+</resources>

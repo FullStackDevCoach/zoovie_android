@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EmojiSlider">
+
+        <attr name="emoji" format="string" />
+        <attr name="progress_value" format="float" />
+        <attr name="average_progress" format="float" />
+        <attr name="bar_progress_color_start" format="color" />
+        <attr name="bar_progress_color_end" format="color" />
+        <attr name="bar_track_color" format ="color"/>
+        <attr name="thumb_size_percent_on_pressed" format="float" />
+        <attr name="allow_reselection" format="boolean" />
+        <attr name="is_touch_disabled" format="boolean" />
+
+        <attr name="tooltip_text" format="string" />
+        <attr name="tooltip_dismiss_timer" format="integer" />
+
+        <attr name="should_display_tooltip" format="boolean" />
+        <attr name="should_display_average" format="boolean" />
+        <attr name="should_display_result_picture" format="boolean" />
+
+        <attr name="register_touches_outside_thumb" format="boolean" />
+
+        <attr name="particle_direction" format="enum">
+            <enum name="up" value="0" />
+            <enum name="down" value="1" />
+        </attr>
+
+    </declare-styleable>
+</resources>

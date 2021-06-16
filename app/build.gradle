@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
+    id 'kotlin-android'
 }
-
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -44,6 +44,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     //ssp and sdp
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
@@ -82,5 +83,8 @@ dependencies {
 
 //    circular view pager indicator
     implementation 'fr.avianey.com.viewpagerindicator:library:2.4.1.1@aar'
+
+    implementation 'com.facebook.rebound:rebound:0.3.8'
+    implementation 'com.cpiz.bubbleview:bubbleview:1.0.2'
 
 }

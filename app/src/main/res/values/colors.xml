@@ -22,4 +22,11 @@
     <color name="btn_color_red">#D92D33</color>
     <color name="btn_icon_background_red">#E52528</color>
     <color name="bn_color_red">#E52528</color>
+
+    <color name="slider_sticker_background">@color/white</color>
+    <color name="slider_track">#dbdbdb</color>
+    <color name="slider_gradient_end">#fff50000</color>
+    <color name="slider_gradient_start">#ffb900b4</color>
+    <color name="grey_2">#dbdbdb</color>
+
 </resources>

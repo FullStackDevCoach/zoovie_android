@@ -1,35 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/_5sdp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardCornerRadius="10dp"
         android:visibility="visible"
-        android:elevation="15dp">
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/iv_event_now_later"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/demo_image"
-                android:scaleType="fitXY"/>
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_event_name_now_later"
-                android:layout_width="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/demo_image" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Event Name"
                 android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:textSize="@dimen/_14ssp"
-                android:textColor="@color/white"
-                android:fontFamily="@font/poppins_semibold"/>
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_event_name_now_later"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Event Name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp" />
+
+                <com.example.zoovienew.customview.emojislider.EmojiSlider
+                    android:id="@+id/slider_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    app:allow_reselection="true"
+                    app:bar_progress_color_end="#D4145A"
+                    app:bar_progress_color_start="#FBB03B"
+                    app:emoji="🙂"
+                    app:progress_value="0.0"
+                    app:register_touches_outside_thumb="true" />
+
+            </LinearLayout>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
