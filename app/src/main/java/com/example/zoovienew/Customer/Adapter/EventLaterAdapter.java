@@ -45,12 +45,15 @@ public class EventLaterAdapter extends RecyclerView.Adapter<EventLaterAdapter.Vi
         holder.profileName.setText(dataHolder.get(position).getProfileName());
         holder.slider_seekbar.setPositionListener(pos ->
         {
-            if (pos < 0.33f) {
-                holder.slider_seekbar.setEmoji("🙂");
-            } else if (pos < 0.66f) {
-                holder.slider_seekbar.setEmoji("😃");
-            } else if (pos > 0.66f || pos == 1.0f) {
-                holder.slider_seekbar.setEmoji("😍");
+            if(pos<0.33f)
+            {
+                holder.slider_seekbar.setEmoji("❄");
+            }else if(pos<0.66f )
+            {
+                holder.slider_seekbar.setEmoji("🔥");
+            }else if(pos>0.66f || pos==1.0f)
+            {
+                holder.slider_seekbar.setEmoji("🔥🔥");
             }
             return Unit.INSTANCE;
         });

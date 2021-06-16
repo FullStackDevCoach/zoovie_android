@@ -48,7 +48,7 @@
                     app:allow_reselection="true"
                     app:bar_progress_color_end="#D4145A"
                     app:bar_progress_color_start="#FBB03B"
-                    app:emoji="🙂"
+                    app:emoji="❄"
                     app:progress_value="0.0"
                     app:register_touches_outside_thumb="true" />
 

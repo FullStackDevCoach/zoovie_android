@@ -42,13 +42,13 @@ public class EventNowOrLaterAdapter extends RecyclerView.Adapter<EventNowOrLater
         {
             if(pos<0.33f)
             {
-                holder.slider_seekbar.setEmoji("🙂");
+                holder.slider_seekbar.setEmoji("❄");
             }else if(pos<0.66f )
             {
-                holder.slider_seekbar.setEmoji("😃");
+                holder.slider_seekbar.setEmoji("🔥");
             }else if(pos>0.66f || pos==1.0f)
             {
-                holder.slider_seekbar.setEmoji("😍");
+                holder.slider_seekbar.setEmoji("🔥🔥");
             }
             return Unit.INSTANCE;
         });
