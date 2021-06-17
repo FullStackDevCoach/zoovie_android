@@ -6,35 +6,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Customer.Fragment.HomeEventsFragment">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
+    <TableRow
         android:layout_width="match_parent"
-        app:tabTextAppearance="@style/MineCustomTabText"
-        app:tabIndicatorColor="@color/btn_color_red"
-        app:tabSelectedTextColor="@color/bn_color_red"
-        android:background="@color/background_light_blue"
+        android:id="@+id/traw_header"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tab_now"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="NOW" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_event_now"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangular_10_solid"
+            android:text="NOW"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tab_later"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="LATER" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_event_later"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/rectangular_10_solid"
+            android:backgroundTint="@color/grey"
+            android:text="LATER"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
+    </TableRow>
 
-    </com.google.android.material.tabs.TabLayout>
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/view_pager_home_events"
-        android:layout_below="@+id/tabLayout"
+    <FrameLayout
+        android:id="@+id/event_contentFrameLayout"
+        android:layout_below="@+id/traw_header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
+
 
 
 </RelativeLayout>

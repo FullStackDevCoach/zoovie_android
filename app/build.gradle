@@ -87,4 +87,6 @@ dependencies {
     implementation 'com.facebook.rebound:rebound:0.3.8'
     implementation 'com.cpiz.bubbleview:bubbleview:1.0.2'
 
+    implementation "com.github.skydoves:powermenu:2.1.9"
+
 }
