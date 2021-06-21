@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.zoovienew.Customer.Activity.FragViewerActivity;
+import com.example.zoovienew.Customer.Activity.SelectLocationActivity;
 import com.example.zoovienew.Customer.Adapter.HomePagerAdapter;
 import com.example.zoovienew.R;
 import com.google.android.material.tabs.TabItem;
@@ -24,7 +25,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     ViewPager pager;
     TabLayout homeTabLayout;
     TabItem tabHosts, tabVenues, tabEvents;
-    ImageView message;
+    ImageView iv_loaction_change;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,8 +38,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         pager = view.findViewById(R.id.view_pager_home);
-        message = view.findViewById(R.id.iv_chat);
-        message.setOnClickListener(this);
+        iv_loaction_change = view.findViewById(R.id.iv_loaction_change);
+        iv_loaction_change.setOnClickListener(this);
 
         homeTabLayout=view.findViewById(R.id.tabLayout);
         tabEvents = view.findViewById(R.id.tab_events);
@@ -71,6 +72,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         if (v.getId() == R.id.iv_chat){
             Intent intent = new Intent(getActivity(), FragViewerActivity.class);
             intent.putExtra("FragmentViewer","MessageFragment");
+            startActivity(intent);
+        }else if(v.getId()==R.id.iv_loaction_change)
+        {
+            Intent intent = new Intent(getActivity(), SelectLocationActivity.class);
             startActivity(intent);
         }
 

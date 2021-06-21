@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.zoovienew.Customer.Activity.HomePageActivity;
 import com.example.zoovienew.R;
@@ -29,6 +30,8 @@ public class SettingsFragment extends Fragment implements View.OnClickListener{
         binding = FragmentSettingsBinding.inflate(getLayoutInflater());
         binding.btnBack.setOnClickListener(this);
         binding.btnProfileUpdate.setOnClickListener(this);
+        binding.btnAboutus.setOnClickListener(this);
+        binding.btnContactus.setOnClickListener(this);
 
         return binding.getRoot();
     }
@@ -42,6 +45,10 @@ public class SettingsFragment extends Fragment implements View.OnClickListener{
         else if (v.getId() == R.id.btn_profile_update){
             Intent intent = new Intent(getActivity(), HomePageActivity.class);
             startActivity(intent);
+        }else if (v.getId() == R.id.btn_aboutus){
+            Toast.makeText(getActivity(), "AboutUs", Toast.LENGTH_SHORT).show();
+        }else if (v.getId() == R.id.btn_contactus){
+            Toast.makeText(getActivity(), "ContactUs", Toast.LENGTH_SHORT).show();
         }
 
     }

@@ -210,6 +210,34 @@
                 android:textSize="16sp"
                 android:layout_marginBottom="@dimen/_12sdp" />
 
+            <!--            AboutUS button-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_aboutus"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@drawable/rounded_rectangular_white"
+                android:text="About Us"
+                android:textStyle="bold"
+                android:textColor="@color/bn_color_red"
+                android:textSize="16sp" />
+
+            <!--            Contactus button-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_contactus"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@drawable/rounded_rectangular_white"
+                android:text="Contact Us"
+                android:textColor="@color/bn_color_red"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
 
         </LinearLayout>
     </ScrollView>

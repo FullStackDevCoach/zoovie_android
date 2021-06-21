@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.zoovienew">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -9,10 +10,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ZoovieNew">
-        <activity android:name=".VideoViewActivity"></activity>
+
+        <activity
+            android:name=".Customer.Activity.SelectLocationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".VideoViewActivity"/>
+
         <activity
             android:name=".Hosts.Activity.HostFragViewerActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
+
         <activity
             android:name=".Hosts.Activity.PayoutActivity"
             android:screenOrientation="portrait" />
