@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.zoovienew.Customer.Activity.FragViewerActivity;
+import com.example.zoovienew.Customer.Activity.SelectLocationActivity;
 import com.example.zoovienew.Customer.Adapter.NotificationVenueAdapter;
 import com.example.zoovienew.Customer.Model.NotificationVenueModel;
 import com.example.zoovienew.R;
@@ -34,7 +35,7 @@ public class NotificationFragment extends Fragment implements View.OnClickListen
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentNotificationBinding.inflate(getLayoutInflater());
-        binding.ivChat.setOnClickListener(this);
+        binding.ivLoactionChange.setOnClickListener(this);
         binding.tvTicketSeeAll.setOnClickListener(this);
         binding.tvMessageSeeAll.setOnClickListener(this);
         binding.tvNotificationSeeAll.setOnClickListener(this);
@@ -61,9 +62,9 @@ public class NotificationFragment extends Fragment implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.iv_chat){
-            Intent intent = new Intent(getActivity(), FragViewerActivity.class);
-            intent.putExtra("FragmentViewer", "MessageFragment");
+        if(v.getId()==R.id.iv_loaction_change)
+        {
+            Intent intent = new Intent(getActivity(), SelectLocationActivity.class);
             startActivity(intent);
         }
         else if (v.getId() == R.id.tv_message_see_all)

@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.zoovienew.Customer.Activity.FragViewerActivity;
+import com.example.zoovienew.Customer.Activity.SelectLocationActivity;
 import com.example.zoovienew.Customer.Adapter.PlayTicketDetailAdapter;
 import com.example.zoovienew.Customer.Model.PlayTicketModel;
 import com.example.zoovienew.R;
@@ -40,7 +41,7 @@ public class PlayFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentPlayBinding.inflate(getLayoutInflater());
-        binding.ivChat.setOnClickListener(this);
+        binding.ivLoactionChange.setOnClickListener(this);
 
         binding.rvPlay.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -102,11 +103,11 @@ public class PlayFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.iv_chat){
-            Intent intent = new Intent(getActivity(), FragViewerActivity.class);
-            intent.putExtra("FragmentViewer", "MessageFragment");
+        if(v.getId()==R.id.iv_loaction_change)
+        {
+            Intent intent = new Intent(getActivity(), SelectLocationActivity.class);
             startActivity(intent);
-
         }
+
     }
 }
