@@ -22,7 +22,7 @@
             android:layout_centerVertical="true"
             android:layout_margin="5dp"
             android:backgroundTint="@color/red"
-            android:background="@drawable/circle_light_pink"
+            android:background="@drawable/ic_circle_red_solid"
             android:padding="10dp"
             android:scaleType="centerInside"
             android:src="@drawable/ic_back"
@@ -75,7 +75,7 @@
                     android:textSize="@dimen/_17ssp" />
 
                 <ImageView
-                    android:id="@+id/img_more"
+                    android:id="@+id/img_share"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"

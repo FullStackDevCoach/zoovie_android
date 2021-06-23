@@ -56,7 +56,7 @@ public class HomeVenueAdapter extends RecyclerView.Adapter<HomeVenueAdapter.myVi
                 public void onClick(View v) {
 
                     mContext.getApplicationContext().startActivity(new Intent(mContext, FragViewerActivity.class)
-                            .putExtra("FragmentViewer","VenueItemDetailFragment")
+                            .putExtra("FragmentViewer","Venue_itemDetailsFragmentNew")
                             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK));
                 }
             });

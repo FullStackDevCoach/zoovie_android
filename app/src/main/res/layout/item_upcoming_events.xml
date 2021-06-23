@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_event_name"
+        android:src="@drawable/demo_image"
+        android:scaleType="fitXY"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_event_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ALIBI LOUNGE"
+        android:layout_above="@+id/tv_event_time"
+        android:textSize="@dimen/_16ssp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/dark_grey"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/tv_event_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 2-4 PM"
+        android:drawableStart="@drawable/ic_clock"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/dark_grey"
+        android:drawableTint="@color/dark_grey"/>
+
+</RelativeLayout>

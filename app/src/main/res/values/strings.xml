@@ -97,4 +97,10 @@
     <string name="average_answer">Average answer.</string>
     <string name="hosted_by">Hosted By</string>
     <string name="suggestion_for_you">Suggestion for you</string>
+    <string name="review">Review</string>
+    <string name="tickets_and_tables"><![CDATA[Tickets & tables]]></string>
+    <string name="str_upcoming_event">Upcoming Events</string>
+    <string name="str_past_event">Past Events</string>
+    <string name="str_hours">Hours</string>
+    <string name="str_open">Open</string>
 </resources>

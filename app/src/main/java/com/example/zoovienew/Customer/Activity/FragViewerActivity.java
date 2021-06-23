@@ -14,6 +14,7 @@ import com.example.zoovienew.Customer.Fragment.SettingsFragment;
 import com.example.zoovienew.Customer.Fragment.TicketSeeAllFragment;
 import com.example.zoovienew.Customer.Fragment.VenueItemDetailsFragment;
 import com.example.zoovienew.Customer.Fragment.VenueItemDetailsTicketFragment;
+import com.example.zoovienew.Customer.Fragment.VenueItemDetailsNewFragment;
 import com.example.zoovienew.R;
 
 public class FragViewerActivity extends AppCompatActivity {
@@ -27,10 +28,12 @@ public class FragViewerActivity extends AppCompatActivity {
 
         if (s1.equals("EventNowItemDetailsFragment")){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_in_Activity, new EventNowItemDetailsFragment()).commit();
+        }if (s1.equals("Venue_itemDetailsFragmentNew")){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_in_Activity, new VenueItemDetailsNewFragment()).commit();
         }
-        if (s1.equals("VenueItemDetailFragment")){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_in_Activity, new VenueItemDetailsFragment()).commit();
-        }
+//        if (s1.equals("VenueItemDetailFragment")){
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_in_Activity, new VenueItemDetailsFragment()).commit();
+//        }
         else if (s1.equals("HostItemDetailFragment")) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_in_Activity, new HostItemDetailsFragment()).commit();
         }

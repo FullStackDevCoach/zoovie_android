@@ -68,4 +68,40 @@ public class PowerMenuUtils {
                 .build();
 
     }
+
+    public static PowerMenu getVenueTimePowerMenu(
+            Context context,
+            LifecycleOwner lifecycleOwner,
+            OnMenuItemClickListener<PowerMenuItem> onMenuItemClickListener,
+            OnDismissedListener onDismissedListener) {
+
+        return new PowerMenu.Builder(context)
+                .addItem(new PowerMenuItem("6 AM LOUNGE", false))
+                .addItem(new PowerMenuItem("8 AM ATLANTA", false))
+                .addItem(new PowerMenuItem("9 AM LOUNGE", false))
+                .addItem(new PowerMenuItem("10 AM ATLANTA", false))
+                .addItem(new PowerMenuItem("11 AM LOUNGE", false))
+                .addItem(new PowerMenuItem("4 PM ATLANTA", false))
+                .addItem(new PowerMenuItem("6 PM LOUNGE", false))
+                .setDividerHeight(2)
+                .setAutoDismiss(true)
+                .setLifecycleOwner(lifecycleOwner)
+                .setAnimation(MenuAnimation.SHOWUP_TOP_LEFT)
+                .setMenuRadius(10f)
+                .setMenuShadow(10f)
+                .setTextColor(ContextCompat.getColor(context, R.color.black))
+                .setTextSize(14)
+                .setTextGravity(Gravity.CENTER)
+                .setSelectedTextColor(Color.WHITE)
+                .setMenuColor(ContextCompat.getColor(context, R.color.white))
+                .setSelectedMenuColor(ContextCompat.getColor(context, R.color.btn_color_red))
+                .setOnMenuItemClickListener(onMenuItemClickListener)
+                .setOnDismissListener(onDismissedListener)
+                .setPreferenceName("HoursPowerMenu")
+                .setInitializeRule(Lifecycle.Event.ON_CREATE, 0)
+                .setShowBackground(false)
+                .setFocusable(true)
+                .build();
+
+    }
 }

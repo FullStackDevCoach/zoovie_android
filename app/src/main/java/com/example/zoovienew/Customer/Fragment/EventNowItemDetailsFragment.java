@@ -89,7 +89,7 @@ public class EventNowItemDetailsFragment extends Fragment implements View.OnClic
             intent.putExtra("FragmentViewer","CommentsFragment");
             startActivity(intent);
         }
-        else if (v.getId() == R.id.ll_share){
+        else if (v.getId() == R.id.img_share){
             Intent sharingIntent = new Intent(Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
             String shareBody = "Your body here";
