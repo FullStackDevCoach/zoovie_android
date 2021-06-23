@@ -12,6 +12,7 @@ import com.example.zoovienew.Customer.Fragment.NotificationSeeAllFragment;
 import com.example.zoovienew.Customer.Fragment.ProfileDetailsFragment;
 import com.example.zoovienew.Customer.Fragment.SettingsFragment;
 import com.example.zoovienew.Customer.Fragment.TicketSeeAllFragment;
+import com.example.zoovienew.Customer.Fragment.UpcomingEventsFragment;
 import com.example.zoovienew.Customer.Fragment.VenueItemDetailsFragment;
 import com.example.zoovienew.Customer.Fragment.VenueItemDetailsTicketFragment;
 import com.example.zoovienew.Customer.Fragment.VenueItemDetailsNewFragment;
@@ -30,6 +31,7 @@ public class FragViewerActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_in_Activity, new EventNowItemDetailsFragment()).commit();
         }if (s1.equals("Venue_itemDetailsFragmentNew")){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_in_Activity, new VenueItemDetailsNewFragment()).commit();
+
         }
 //        if (s1.equals("VenueItemDetailFragment")){
 //            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_in_Activity, new VenueItemDetailsFragment()).commit();

@@ -33,8 +33,8 @@ public class UpcomingEventAdapter extends RecyclerView.Adapter<UpcomingEventAdap
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.loungeName.setText(dataHolder.get(position).getLoungeName());
-        holder.loungeTime.setText(dataHolder.get(position).getLoungeTime());
+        holder.tv_event_name.setText(dataHolder.get(position).getLoungeName());
+        holder.tv_event_time.setText(dataHolder.get(position).getLoungeTime());
     }
 
     @Override
@@ -43,11 +43,11 @@ public class UpcomingEventAdapter extends RecyclerView.Adapter<UpcomingEventAdap
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView loungeName, loungeTime;
+        TextView tv_event_name, tv_event_time;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            loungeName = itemView.findViewById(R.id.tv_host_detail_event_lounge_name);
-            loungeTime = itemView.findViewById(R.id.tv_host_detail_event_lounge_time);
+            tv_event_name = itemView.findViewById(R.id.tv_event_name);
+            tv_event_time = itemView.findViewById(R.id.tv_event_time);
         }
     }
 }

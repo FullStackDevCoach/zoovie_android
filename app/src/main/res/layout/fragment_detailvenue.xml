@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    tools:viewBindingIgnore="true"
     android:layout_height="match_parent"
     tools:context=".Customer.Fragment.VenueItemDetailsNewFragment"
     android:background="@color/background_light_blue">
@@ -59,10 +60,12 @@
             android:textSize="16sp" />
     </RelativeLayout>
 
-    <androidx.core.widget.NestedScrollView
+    <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rl_header"
+        android:fillViewport="true"
         android:layout_marginTop="@dimen/_5sdp">
 
         <LinearLayout
@@ -217,10 +220,12 @@
             </LinearLayout>
 
             <!--    tab view layout-->
-            <RelativeLayout
+            <LinearLayout
+                android:layout_below="@+id/scroll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
+                android:orientation="vertical"
                 android:paddingTop="5dp">
 
                 <com.google.android.material.tabs.TabLayout
@@ -231,17 +236,17 @@
                     app:tabSelectedTextColor="@color/bn_color_red"
                     app:tabTextAppearance="@style/MineCustomTabText">
 
-<!--                    <com.google.android.material.tabs.TabItem-->
-<!--                        android:id="@+id/tab_upcoming_event"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:text="@string/str_upcoming_event" />-->
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_events_upcoming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upcoming Event" />
 
-<!--                    <com.google.android.material.tabs.TabItem-->
-<!--                        android:id="@+id/tab_event_past"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:text="@string/str_past_event" />-->
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_event_past"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Past Event" />
 
 
                 </com.google.android.material.tabs.TabLayout>
@@ -249,13 +254,12 @@
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/view_pager_venue_event"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tab_layout" />
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:layout_height="800dp" />
 
-            </RelativeLayout>
-
+            </LinearLayout>
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    </ScrollView>
 
 
 </RelativeLayout>

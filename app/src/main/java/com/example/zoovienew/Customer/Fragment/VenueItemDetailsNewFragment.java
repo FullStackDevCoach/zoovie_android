@@ -1,5 +1,6 @@
 package com.example.zoovienew.Customer.Fragment;
 
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,11 +8,19 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.zoovienew.Customer.Activity.FragViewerActivity;
 import com.example.zoovienew.Customer.Activity.HomePageActivity;
@@ -20,24 +29,37 @@ import com.example.zoovienew.Customer.Adapter.VenueReviewAdapter;
 import com.example.zoovienew.Customer.Model.VenueModel;
 import com.example.zoovienew.Customer.Model.VenueReviewModel;
 import com.example.zoovienew.R;
-import com.example.zoovienew.databinding.FragmentVenueItemdetailsNewBinding;
 import com.example.zoovienew.utils.PowerMenuUtils;
+import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import com.skydoves.powermenu.OnDismissedListener;
 import com.skydoves.powermenu.OnMenuItemClickListener;
 import com.skydoves.powermenu.PowerMenu;
 import com.skydoves.powermenu.PowerMenuItem;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class VenueItemDetailsNewFragment extends Fragment implements View.OnClickListener {
-    private FragmentVenueItemdetailsNewBinding binding;
+    //    private FragmentDetailvanueBinding binding;
     VenueModel dataHolder;
     List<String> vanueTimeList;
     ArrayList<VenueReviewModel> venueReviewList;
 
     PowerMenu venueTimeMenu;
+
+    ViewPager pager;
+    TabLayout tab_layout;
+    TabItem tab_events_upcoming, tab_event_past;
+
+    ImageView btn_back, iv_detail_venue_image, img_share;
+    AppCompatTextView header_title, header_retting, tv_detail_venue_address;
+    LinearLayout line_hours_open;
+    RecyclerView rv_review_venue;
+
+    AppCompatButton btn_ticket_table;
 
     private final OnMenuItemClickListener<PowerMenuItem> onHamburgerItemClickListener =
             new OnMenuItemClickListener<PowerMenuItem>() {
@@ -64,7 +86,25 @@ public class VenueItemDetailsNewFragment extends Fragment implements View.OnClic
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentVenueItemdetailsNewBinding.inflate(getLayoutInflater());
+        View view = inflater.inflate(R.layout.fragment_detailvenue, container, false);
+
+        pager = view.findViewById(R.id.view_pager_venue_event);
+        tab_layout = view.findViewById(R.id.tab_layout);
+        tab_events_upcoming = view.findViewById(R.id.tab_events_upcoming);
+        tab_event_past = view.findViewById(R.id.tab_event_past);
+
+        btn_back = view.findViewById(R.id.btn_back);
+        iv_detail_venue_image = view.findViewById(R.id.iv_detail_venue_image);
+        img_share = view.findViewById(R.id.img_share);
+
+        header_title = view.findViewById(R.id.header_title);
+        header_retting = view.findViewById(R.id.header_retting);
+        tv_detail_venue_address = view.findViewById(R.id.tv_detail_venue_address);
+
+        line_hours_open = view.findViewById(R.id.line_hours_open);
+        rv_review_venue = view.findViewById(R.id.rv_review_venue);
+        btn_ticket_table = view.findViewById(R.id.btn_ticket_table);
+
 
         dataHolder = new VenueModel("ALIBI ATLANTA", "Atlanta, GA, USA", "5.0");
         vanueTimeList = new ArrayList<>();
@@ -84,31 +124,31 @@ public class VenueItemDetailsNewFragment extends Fragment implements View.OnClic
         venueReviewList.add(new VenueReviewModel("", "Rufaro", "I love this venue"));
 
 
-        binding.btnBack.setOnClickListener(this);
-        binding.imgShare.setOnClickListener(this);
-        binding.tvDetailVenueAddress.setOnClickListener(this);
-        binding.lineHoursOpen.setOnClickListener(this);
+        btn_back.setOnClickListener(this);
+        img_share.setOnClickListener(this);
+        tv_detail_venue_address.setOnClickListener(this);
+        line_hours_open.setOnClickListener(this);
 
-        binding.headerTitle.setText(dataHolder.getVenueName());
-        binding.headerRetting.setText(dataHolder.getVenueRating());
-        binding.tvDetailVenueAddress.setText(dataHolder.getVenueLocation());
+        header_title.setText(dataHolder.getVenueName());
+        header_retting.setText(dataHolder.getVenueRating());
+        tv_detail_venue_address.setText(dataHolder.getVenueLocation());
 
-        binding.headerRetting.setOnClickListener(this);
+        header_retting.setOnClickListener(this);
 
 
-        binding.rvReviewVenue.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        rv_review_venue.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
-        binding.rvReviewVenue.setAdapter(new VenueReviewAdapter(venueReviewList, getActivity()));
+        rv_review_venue.setAdapter(new VenueReviewAdapter(venueReviewList, getActivity()));
 
         venueTimeMenu = PowerMenuUtils.getVenueTimePowerMenu(getActivity(), this, onHamburgerItemClickListener, onHamburgerMenuDismissedListener);
 
-        VenueEventPagerAdapter adapter = new VenueEventPagerAdapter(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, binding.tabLayout.getTabCount());
-        binding.viewPagerVenueEvent.setAdapter(adapter);
+        VenueEventPagerAdapter adapter = new VenueEventPagerAdapter(getFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, tab_layout.getTabCount());
+        pager.setAdapter(adapter);
 
-        binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        tab_layout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                binding.viewPagerVenueEvent.setCurrentItem(tab.getPosition());
+                pager.setCurrentItem(tab.getPosition());
             }
 
             @Override
@@ -121,9 +161,8 @@ public class VenueItemDetailsNewFragment extends Fragment implements View.OnClic
 
             }
         });
-        binding.viewPagerVenueEvent.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(binding.tabLayout));
-
-        return binding.getRoot();
+        pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab_layout));
+        return view;
 
     }
 
