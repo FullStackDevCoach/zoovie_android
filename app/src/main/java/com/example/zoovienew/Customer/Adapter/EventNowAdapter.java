@@ -76,7 +76,7 @@ public class EventNowAdapter extends RecyclerView.Adapter<EventNowAdapter.ViewHo
                 @Override
                 public void onClick(View v) {
                     mContext.getApplicationContext().startActivity(new Intent(mContext, FragViewerActivity.class)
-                            .putExtra("FragmentViewer", "VenueItemDetailFragment")
+                            .putExtra("FragmentViewer", "EventNowItemDetailsFragment")
                             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK));
                 }
             });

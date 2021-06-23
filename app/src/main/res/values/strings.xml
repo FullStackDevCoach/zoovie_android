@@ -95,4 +95,6 @@
     <string name="who_zoovie">Who the zoovie ?</string>
 
     <string name="average_answer">Average answer.</string>
+    <string name="hosted_by">Hosted By</string>
+    <string name="suggestion_for_you">Suggestion for you</string>
 </resources>

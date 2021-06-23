@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.zoovienew.Customer.Fragment.CommentsFragment;
+import com.example.zoovienew.Customer.Fragment.EventNowItemDetailsFragment;
 import com.example.zoovienew.Customer.Fragment.HostItemDetailsFragment;
 import com.example.zoovienew.Customer.Fragment.MessageFragment;
 import com.example.zoovienew.Customer.Fragment.NotificationSeeAllFragment;
@@ -24,6 +25,9 @@ public class FragViewerActivity extends AppCompatActivity {
 
         String s1 =getIntent().getStringExtra("FragmentViewer");
 
+        if (s1.equals("EventNowItemDetailsFragment")){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_in_Activity, new EventNowItemDetailsFragment()).commit();
+        }
         if (s1.equals("VenueItemDetailFragment")){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_in_Activity, new VenueItemDetailsFragment()).commit();
         }
