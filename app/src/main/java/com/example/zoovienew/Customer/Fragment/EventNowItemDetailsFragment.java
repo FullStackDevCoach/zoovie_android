@@ -40,6 +40,7 @@ public class EventNowItemDetailsFragment extends Fragment implements View.OnClic
         binding.llComment1.setOnClickListener(this);
         binding.llComment2.setOnClickListener(this);
         binding.llShare.setOnClickListener(this);
+        binding.tvDetailVenueName.setOnClickListener(this);
         binding.rvProfileConnect.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
 
         dataHolder = new ArrayList<>();
@@ -65,7 +66,14 @@ public class EventNowItemDetailsFragment extends Fragment implements View.OnClic
             Intent n1 = new Intent(getActivity(), HomePageActivity.class);
             startActivity(n1);
         }
-        else if (v.getId() == R.id.ll_like_1){
+        else if (v.getId() == R.id.tv_detail_venue_name)
+        {
+            Intent intent = new Intent(getContext(), FragViewerActivity.class);
+            intent.putExtra("FragmentViewer","Venue_itemDetailsFragmentNew");
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+
+        }else if (v.getId() == R.id.ll_like_1){
             if (binding.ivLikeVenueDetail1.getDrawable().getConstantState() == getResources().getDrawable( R.drawable.ic_like).getConstantState()){
                 binding.ivLikeVenueDetail1.setImageResource(R.drawable.ic_like_filled);
             }else {

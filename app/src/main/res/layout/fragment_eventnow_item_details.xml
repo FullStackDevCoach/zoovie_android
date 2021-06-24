@@ -68,7 +68,7 @@
                     android:id="@+id/tv_detail_venue_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toStartOf="@+id/img_more"
+                    android:layout_toStartOf="@+id/img_share"
                     android:paddingEnd="10dp"
                     android:text="ALIBI ATLANTA"
                     android:textColor="@color/black"
