@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/background_light_blue"
     tools:context=".Customer.Fragment.HostItemDetailsFragment">
 
@@ -18,22 +18,22 @@
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_back"
-            android:tint="@color/black"
             android:paddingTop="@dimen/_16sdp"
-            android:paddingEnd="@dimen/_10sdp"/>
+            android:paddingEnd="@dimen/_10sdp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/black" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/header_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MONICA SMITH"
-            android:textSize="@dimen/_18ssp"
-            android:layout_toEndOf="@id/btn_back"
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_15sdp"
             android:layout_marginBottom="@dimen/_10sdp"
-            android:textColor="@color/black"/>
+            android:layout_toEndOf="@id/btn_back"
+            android:text="MONICA SMITH"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp" />
 
     </RelativeLayout>
 
@@ -41,6 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rl_header">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,12 +49,12 @@
 
             <RelativeLayout
                 android:id="@+id/slider"
-                android:layout_below="@+id/title"
                 android:layout_width="match_parent"
-                android:layout_weight="5"
                 android:layout_height="@dimen/_280sdp"
+                android:layout_below="@+id/title"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="5dp"
+                android:layout_weight="5">
 
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/pager"
@@ -66,9 +67,9 @@
                     android:id="@+id/indicator"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="bottom"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
+                    android:gravity="bottom"
                     android:padding="@dimen/_10sdp"
                     app:centered="true"
                     app:fillColor="@color/white"
@@ -83,42 +84,44 @@
                     android:layout_alignParentBottom="true"
                     android:layout_margin="@dimen/_12sdp"
                     app:cardCornerRadius="@dimen/_530sdp">
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/iv_share"
                         android:layout_width="@dimen/_33sdp"
                         android:layout_height="@dimen/_33sdp"
+                        android:background="@color/btn_color_red"
                         android:padding="@dimen/_6sdp"
-                        android:tint="@color/white"
                         android:paddingStart="@dimen/_7sdp"
                         android:src="@drawable/ic_share_blank"
-                        android:background="@color/btn_color_red"/>
+                        android:tint="@color/white" />
                 </androidx.cardview.widget.CardView>
 
             </RelativeLayout>
 
-<!--            DIRECTMESSAGE LAYOUT-->
+            <!--            DIRECTMESSAGE LAYOUT-->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_12sdp"
-                android:background="@color/white">
+                android:background="@color/white"
+                android:padding="@dimen/_12sdp">
+
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tv_direct_message"
                     android:layout_width="@dimen/_220sdp"
                     android:layout_height="wrap_content"
-                    android:text="Direct message bubble"
-                    android:textSize="@dimen/_15ssp"
                     android:layout_alignParentStart="true"
-                    android:textColor="@color/black"/>
+                    android:text="Direct message bubble"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15ssp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="@dimen/_220sdp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_direct_message"
-                    android:text="(Ask Monica...)"
-                    android:textSize="@dimen/_15ssp"
                     android:layout_alignParentStart="true"
-                    android:textColor="@color/black"/>
+                    android:text="(Ask Monica...)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15ssp" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
@@ -126,57 +129,116 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
                     app:cardCornerRadius="@dimen/_5sdp">
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/iv_message"
                         android:layout_width="@dimen/_33sdp"
                         android:layout_height="@dimen/_33sdp"
+                        android:background="@color/btn_color_red"
                         android:padding="@dimen/_8sdp"
-                        android:tint="@color/white"
                         android:src="@drawable/ic_msg"
-                        android:background="@color/btn_color_red"/>
+                        android:tint="@color/white" />
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
 
-<!--            check availability layout-->
+            <!--            check availability layout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_12sdp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="@dimen/_12sdp">
+
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="@dimen/_220sdp"
                     android:layout_height="wrap_content"
-                    android:text="@string/check_availability"
-                    android:textSize="@dimen/_14ssp"
                     android:layout_alignParentStart="true"
-                    android:textColor="@color/black"/>
+                    android:text="@string/check_availability"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="@dimen/_220sdp"
-                        android:layout_height="wrap_content"
-                        android:text="26-July-2020"
-                        android:textSize="@dimen/_14ssp"
-                        android:layout_centerVertical="true"
+
+                    <RelativeLayout
                         android:layout_alignParentStart="true"
-                        android:textColor="@color/dark_grey"/>
+                        android:id="@+id/relay_selected_calender"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="14dp"
+                            android:background="@color/red" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_calendar_icon" />
+
+                        <TextView
+                            android:id="@+id/txt_month_name"
+                            android:layout_width="35dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="jan"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_date"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="10dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="01"
+                            android:textColor="@color/red"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_calener"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/relay_selected_calender"
+                        android:layout_toStartOf="@+id/card_goto_calender"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_availability_calender" />
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/card_goto_calender"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
                         app:cardCornerRadius="@dimen/_5sdp">
+
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/iv_calender"
                             android:layout_width="@dimen/_33sdp"
                             android:layout_height="@dimen/_33sdp"
+                            android:background="@color/btn_color_red"
                             android:padding="@dimen/_8sdp"
-                            android:tint="@color/white"
                             android:src="@drawable/ic_calender"
-                            android:background="@color/btn_color_red"/>
+                            android:tint="@color/white" />
                     </androidx.cardview.widget.CardView>
                 </RelativeLayout>
             </LinearLayout>
@@ -188,13 +250,14 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:paddingTop="@dimen/_20sdp">
+
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/tab_layout_host_item"
                     android:layout_width="match_parent"
-                    app:tabTextAppearance="@style/MineCustomTabText"
+                    android:layout_height="wrap_content"
                     app:tabIndicatorColor="@color/btn_color_red"
                     app:tabSelectedTextColor="@color/bn_color_red"
-                    android:layout_height="wrap_content">
+                    app:tabTextAppearance="@style/MineCustomTabText">
 
                     <com.google.android.material.tabs.TabItem
                         android:id="@+id/tab_availability"
@@ -213,15 +276,14 @@
 
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/view_pager_host_item"
-                    android:layout_below="@+id/tab_layout_host_item"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_270sdp"/>
+                    android:layout_height="@dimen/_270sdp"
+                    android:layout_below="@+id/tab_layout_host_item" />
 
             </RelativeLayout>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
 
 
 </RelativeLayout>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Handler;
@@ -13,12 +14,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.zoovienew.Customer.Activity.FragViewerActivity;
 import com.example.zoovienew.Customer.Activity.HomePageActivity;
+import com.example.zoovienew.Customer.Adapter.HomeHost_CalenderAdapter;
 import com.example.zoovienew.Customer.Adapter.HostItemPagerAdapter;
 import com.example.zoovienew.Customer.Adapter.SlidingImage_Adapter;
+import com.example.zoovienew.Customer.Model.HostCalenderModel;
 import com.example.zoovienew.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.tabs.TabItem;
@@ -29,7 +33,7 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class HostItemDetailsFragment extends Fragment implements View.OnClickListener{
+public class HostItemDetailsFragment extends Fragment implements View.OnClickListener,HomeHost_CalenderAdapter.ItemSelectDateListener{
 //    private FragmentHostItemDetailsBinding binding;
     private static final Integer[] IMAGES= {R.drawable.profile_girl,R.drawable.profile_girl,R.drawable.profile_girl,R.drawable.profile_girl};
     private ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
@@ -41,6 +45,11 @@ public class HostItemDetailsFragment extends Fragment implements View.OnClickLis
     TabItem tabAvailability, tabEvents;
     ImageView backBtn, share, message, calender;
 
+
+    RecyclerView recycler_calener;
+    ArrayList<HostCalenderModel> calender_date_list;
+    TextView txt_month_name,txt_date;
+
      @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +60,7 @@ public class HostItemDetailsFragment extends Fragment implements View.OnClickLis
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_host_item_details, container, false);
+
         backBtn = view.findViewById(R.id.btn_back);
         backBtn.setOnClickListener(this);
 
@@ -60,6 +70,11 @@ public class HostItemDetailsFragment extends Fragment implements View.OnClickLis
         share.setOnClickListener(this);
         message.setOnClickListener(this);
         calender.setOnClickListener(this);
+
+        txt_month_name=view.findViewById(R.id.txt_month_name);
+        txt_date=view.findViewById(R.id.txt_date);
+
+        initCalenderDateData(view);
 
         pager = view.findViewById(R.id.view_pager_host_item);
         hostTabLayout=view.findViewById(R.id.tab_layout_host_item);
@@ -88,6 +103,23 @@ public class HostItemDetailsFragment extends Fragment implements View.OnClickLis
 
         init(view);
         return view;
+    }
+
+    private void initCalenderDateData(View view)
+    {
+        calender_date_list=new ArrayList<>();
+
+        calender_date_list.add(new HostCalenderModel("01/july/2021","01","july","2021"));
+        calender_date_list.add(new HostCalenderModel("01/july/2021","02","july","2021"));
+        calender_date_list.add(new HostCalenderModel("01/july/2021","03","july","2021"));
+        calender_date_list.add(new HostCalenderModel("01/july/2021","04","july","2021"));
+        calender_date_list.add(new HostCalenderModel("01/july/2021","05","july","2021"));
+        calender_date_list.add(new HostCalenderModel("01/july/2021","06","july","2021"));
+
+        txt_month_name.setText(calender_date_list.get(0).getMonth());
+        txt_date.setText(calender_date_list.get(0).getDate());
+        recycler_calener=view.findViewById(R.id.recycler_calener);
+        recycler_calener.setAdapter(new HomeHost_CalenderAdapter(this,calender_date_list,getActivity()));
     }
 
     private void init(View view) {
@@ -178,5 +210,12 @@ public class HostItemDetailsFragment extends Fragment implements View.OnClickLis
                 }
             });
         }
+    }
+
+    @Override
+    public void onDateSelect(int position)
+    {
+        txt_month_name.setText(calender_date_list.get(position).getMonth());
+        txt_date.setText(calender_date_list.get(position).getDate());
     }
 }

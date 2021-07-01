@@ -67,12 +67,20 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tv_detail_venue_name"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:background="@drawable/semirounded_rectangular_white"
+                    android:layout_height="match_parent"
                     android:layout_toStartOf="@+id/img_share"
-                    android:paddingEnd="10dp"
+                    android:paddingEnd="15dp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_marginEnd="5dp"
+                    android:paddingStart="15dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
                     android:text="ALIBI ATLANTA"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_17ssp" />
+                    android:textColor="@color/red"
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/img_share"
@@ -95,7 +103,7 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:drawableStart="@drawable/ic_calender"
                 android:text="Tuesday, Mar 31, 11 PM"

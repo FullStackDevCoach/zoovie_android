@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.zoovienew.Customer.Model.VenueReviewModel;
 import com.example.zoovienew.R;
+import com.example.zoovienew.customview.ratingbar.NiceRatingBar;
+import com.example.zoovienew.customview.ratingbar.RatingStatus;
 
 import java.util.ArrayList;
 
@@ -35,6 +37,8 @@ public class VenueReviewAdapter extends RecyclerView.Adapter<VenueReviewAdapter.
     public void onBindViewHolder(@NonNull VenueReviewAdapter.MyViewHolder holder, int position) {
         holder.profileName.setText(dataHolder.get(position).getProfileName());
         holder.tv_review.setText(dataHolder.get(position).getProfileReview());
+        holder. niceRatingBar.setRating(dataHolder.get(position).getProfileReting());
+        holder.niceRatingBar.setRatingStatus(RatingStatus.Disable);
     }
 
     @Override
@@ -45,11 +49,13 @@ public class VenueReviewAdapter extends RecyclerView.Adapter<VenueReviewAdapter.
     class MyViewHolder extends RecyclerView.ViewHolder{
         TextView profileName,tv_review;
         ImageView iv_profile_image;
+        NiceRatingBar niceRatingBar;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             profileName = itemView.findViewById(R.id.tv_profile_name);
             tv_review = itemView.findViewById(R.id.tv_review);
             iv_profile_image = itemView.findViewById(R.id.iv_profile_image);
+            niceRatingBar = itemView.findViewById(R.id.niceRatingBar);
         }
     }
 }

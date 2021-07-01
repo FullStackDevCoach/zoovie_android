@@ -118,10 +118,10 @@ public class VenueItemDetailsNewFragment extends Fragment implements View.OnClic
 
         venueReviewList = new ArrayList<>();
 
-        venueReviewList.add(new VenueReviewModel("", "Rufaro", "I love this venue"));
-        venueReviewList.add(new VenueReviewModel("", "John", "I love this venue"));
-        venueReviewList.add(new VenueReviewModel("", "Rufaro", "I love this venue"));
-        venueReviewList.add(new VenueReviewModel("", "Rufaro", "I love this venue"));
+        venueReviewList.add(new VenueReviewModel("", "Rufaro", "I love this venue",5f));
+        venueReviewList.add(new VenueReviewModel("", "John", "I love this venue",4f));
+        venueReviewList.add(new VenueReviewModel("", "Rufaro", "I love this venue",5f));
+        venueReviewList.add(new VenueReviewModel("", "Rufaro", "I love this venue",3.5f));
 
 
         btn_back.setOnClickListener(this);

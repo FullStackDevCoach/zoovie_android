@@ -5,12 +5,18 @@ public class VenueReviewModel
     String profileImage;
     String profileName;
     String profileReview;
+    Float profileReting;
 
-    public VenueReviewModel(String profileImage, String profileName, String profileReview)
+    public VenueReviewModel(String profileImage,
+                            String profileName,
+                            String profileReview,
+                            Float profileReting)
     {
         this.profileImage = profileImage;
         this.profileName = profileName;
         this.profileReview = profileReview;
+        this.profileReview = profileReview;
+        this.profileReting = profileReting;
     }
 
     public String getProfileImage() {
@@ -35,5 +41,13 @@ public class VenueReviewModel
 
     public void setProfileReview(String profileReview) {
         this.profileReview = profileReview;
+    }
+
+    public Float getProfileReting() {
+        return profileReting;
+    }
+
+    public void setProfileReting(Float profileReting) {
+        this.profileReting = profileReting;
     }
 }

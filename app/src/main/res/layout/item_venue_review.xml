@@ -39,6 +39,19 @@
             android:textColor="@color/et_text_hint_color"
             android:textSize="14sp" />
 
+        <com.example.zoovienew.customview.ratingbar.NiceRatingBar
+            android:id="@+id/niceRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:nrb_starTotal="5"
+            app:nrb_starImageWidth="15dp"
+            app:nrb_starImageHeight="15dp"
+            app:nrb_starFullResource="@drawable/ic_star_filled"
+            app:nrb_starEmptyResource="@drawable/ic_star_border"
+            app:nrb_starHalfResource="@drawable/ic_star_half_filled"
+            app:nrb_starImagePadding="4dp"/>
+
         <androidx.appcompat.widget.AppCompatTextView
             android:fontFamily="@font/poppins"
             android:gravity="center_vertical"
