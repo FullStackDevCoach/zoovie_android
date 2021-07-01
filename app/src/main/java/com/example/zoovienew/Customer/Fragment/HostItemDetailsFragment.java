@@ -78,7 +78,6 @@ public class HostItemDetailsFragment extends Fragment implements View.OnClickLis
 
         pager = view.findViewById(R.id.view_pager_host_item);
         hostTabLayout=view.findViewById(R.id.tab_layout_host_item);
-        tabAvailability = view.findViewById(R.id.tab_availability);
         tabEvents = view.findViewById(R.id.tab_events);
 
         HostItemPagerAdapter adapter = new HostItemPagerAdapter(getChildFragmentManager(),

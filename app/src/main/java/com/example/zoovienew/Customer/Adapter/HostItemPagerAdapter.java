@@ -24,17 +24,7 @@ public class HostItemPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        switch (position) {
-
-            case 0:
-                return new AvailabilityFragment();
-            case 1:
-                return new EventFragment();
-
-            default:
-                return null;
-
-        }
+        return new EventFragment();
     }
     @Override
     public int getCount() {

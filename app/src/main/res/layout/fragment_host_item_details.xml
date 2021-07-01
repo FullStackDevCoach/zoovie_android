@@ -106,24 +106,20 @@
                 android:padding="@dimen/_12sdp">
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_direct_message"
                     android:layout_width="@dimen/_220sdp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:text="Direct message bubble"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_15ssp" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="@dimen/_220sdp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_direct_message"
-                    android:layout_alignParentStart="true"
-                    android:text="(Ask Monica...)"
-                    android:textColor="@color/black"
+                    android:layout_toLeftOf="@+id/card_msg"
+                    android:background="@drawable/bubble_right_tail"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:text="Hello?! you there?"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/_15ssp" />
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card_msg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -161,10 +157,10 @@
                     android:layout_height="wrap_content">
 
                     <RelativeLayout
-                        android:layout_alignParentStart="true"
                         android:id="@+id/relay_selected_calender"
                         android:layout_width="60dp"
-                        android:layout_height="60dp">
+                        android:layout_height="60dp"
+                        android:layout_alignParentStart="true">
 
                         <View
                             android:layout_width="match_parent"
@@ -216,8 +212,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toEndOf="@+id/relay_selected_calender"
                         android:layout_toStartOf="@+id/card_goto_calender"
+                        android:layout_toEndOf="@+id/relay_selected_calender"
                         android:orientation="horizontal"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         tools:listitem="@layout/item_availability_calender" />
@@ -258,12 +254,6 @@
                     app:tabIndicatorColor="@color/btn_color_red"
                     app:tabSelectedTextColor="@color/bn_color_red"
                     app:tabTextAppearance="@style/MineCustomTabText">
-
-                    <com.google.android.material.tabs.TabItem
-                        android:id="@+id/tab_availability"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/availability_caps" />
 
                     <com.google.android.material.tabs.TabItem
                         android:id="@+id/tab_events"
